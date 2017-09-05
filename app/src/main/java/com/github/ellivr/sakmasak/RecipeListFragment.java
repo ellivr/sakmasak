@@ -18,6 +18,7 @@ import com.github.ellivr.sakmasak.network.RecipeClient;
 import com.github.ellivr.sakmasak.network.RecipeInterface;
 import com.github.ellivr.sakmasak.utils.GlobalVar;
 import com.github.ellivr.sakmasak.utils.Recipe;
+import com.github.ellivr.sakmasak.utils.SimpleIdlingResource;
 import com.github.ellivr.sakmasak.utils.Steps;
 
 import java.util.ArrayList;
@@ -86,12 +87,20 @@ public class RecipeListFragment extends Fragment implements RecipeListAdapter.Ca
         RecipeInterface recipeInterface = RecipeClient.retrieve();
         Call<ArrayList<Recipe>> recipes = recipeInterface.getRecipes();
 
+        final SimpleIdlingResource idlingResource = ((RecipeListActivity)getActivity()).getIdlingResource();
+        if(idlingResource != null){
+            idlingResource.setIdleState(false);
+        }
+
         recipes.enqueue(new Callback<ArrayList<Recipe>>() {
             @Override
             public void onResponse(Call<ArrayList<Recipe>> call, Response<ArrayList<Recipe>> response) {
                 for(int a=0; a<response.body().size(); a++){
                     mRecipeListAdapter.add(response.body());
                     syncRecipeGridView();
+                    if (idlingResource != null) {
+                        idlingResource.setIdleState(true);
+                    }
                 }
             }
 

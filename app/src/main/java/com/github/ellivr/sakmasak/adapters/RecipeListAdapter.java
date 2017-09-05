@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.github.ellivr.sakmasak.R;
 import com.github.ellivr.sakmasak.utils.Recipe;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,6 +61,11 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Vi
         holder.mRecipe = recipe;
         holder.mRecipeName.setText(recipe.getName());
         holder.mRecipeServings.setText(String.format(mContext.getResources().getString(R.string.recipe_serving_amount), String.valueOf(recipe.getServings())));
+
+        if(recipe.getImage() != null && recipe.getImage() != ""){
+            //If the recipe has an image, let's display it
+            Picasso.with(mContext).load(recipe.getImage()).into(holder.mImageView);
+        }
 
         holder.mImageView.setOnClickListener(new ImageView.OnClickListener() {
             @Override

@@ -44,6 +44,7 @@
             />
 
         <RelativeLayout
+            android:id="@+id/detail_steps_relativelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:descendantFocusability="blocksDescendants">
