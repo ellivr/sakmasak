@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Sak Masak</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipe_serving_amount">Servings: %1$s</string>
+    <string name="detail_title">Ingredients for %1$s</string>
+
+    <string name="colon">:</string>
+    <string name="dash">\u2022 %1$s</string>
+
+    <!--MEASURE-->
+    <string name="cup">cup</string>
+    <string name="tblsp">tablespoon</string>
+    <string name="tsp">teaspoon</string>
+    <string name="kilo">kilograms</string>
+    <string name="gram">grams</string>
+    <string name="oz">ounce</string>
+    <string name="unit">unit</string>
+    <string name="of">of</string>
+
+    <string name="ingredients">Ingredients</string>
+    <string name="required_steps">Required Steps</string>
+    <string name="prev">PREV</string>
+    <string name="next">NEXT</string>
+    <string name="reached_first_step">You have reached the first step for this recipe!</string>
+    <string name="reached_last_step">You have reached the last step for this recipe!</string>
+    <string name="appwidget_text">Open the App and select recipe!</string>
+    <string name="add_widget">Add widget</string>
+</resources>

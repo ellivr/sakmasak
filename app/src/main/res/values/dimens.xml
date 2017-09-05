@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardHeight">200dp</dimen>
+
+    <dimen name="textButton">14sp</dimen>
+    <dimen name="textCaption">12sp</dimen>
+    <dimen name="textBody">14sp</dimen>
+    <dimen name="textSubheading">16sp</dimen>
+    <dimen name="textTitle">20sp</dimen>
+    <dimen name="textHeadline">24sp</dimen>
+
+    <dimen name="spacingSmall">8dp</dimen>
+    <dimen name="spacingMedium">16dp</dimen>
+    <dimen name="spacingBig">24dp</dimen>
+
+    <dimen name="gcolumnwidth">24dp</dimen>
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="spacingVSmall">4dp</dimen>
+    <dimen name="spacingVVSmall">2dp</dimen>
+
+</resources>

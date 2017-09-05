@@ -1,0 +1,72 @@
+<ScrollView
+    android:id="@+id/recipe_detail_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.github.ellivr.sakmasak.StepDetailFragment">
+
+        <ImageView
+            android:id="@+id/dummyimageview"
+            android:padding="@dimen/spacingMedium"
+            android:background="@color/primaryDarkColor"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="@dimen/cardHeight" />
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:padding="@dimen/spacingMedium"
+            android:background="@color/primaryDarkColor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardHeight" />
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:padding="@dimen/spacingMedium"
+            android:id="@+id/exoplayerview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+        <LinearLayout
+            android:gravity="bottom|center"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <Button
+                android:text="@string/prev"
+                android:id="@+id/btn_prev"
+                android:padding="@dimen/spacingMedium"
+                android:textSize="@dimen/textButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="@string/next"
+                android:id="@+id/btn_next"
+                android:padding="@dimen/spacingMedium"
+                android:textSize="@dimen/textButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/step_short_description"
+            android:textSize="@dimen/textSubheading"
+            android:padding="@dimen/spacingMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/step_description"
+            android:textSize="@dimen/textBody"
+            android:padding="@dimen/spacingMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</ScrollView>
+
+
